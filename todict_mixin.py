@@ -7,6 +7,7 @@
 # @File    : todict_mixin.py
 # @Project : MyTools
 # @Software: PyCharm
+
 from pprint import pprint
 import json
 
@@ -129,3 +130,4 @@ roundtrip = deserialized.to_json()
 
 pprint(roundtrip)
 assert json.loads(serialized) == json.loads(roundtrip)
+
