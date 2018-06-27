@@ -21,7 +21,8 @@ def star_unordered_list():
     lines = text.split('\n')
     # print(lines)
     for line in lines:
-        lines[lines.index(line)] = '* ' + line
+        lines[lines.index(line)] = '\t◉ ' + line
+        # '\t◉ '; '\t• '; ...... (by 'shift+ctrl+B' under ch)
     # for i in range(len(lines)):
     #     lines[i] = '* ' + lines[i]
 
