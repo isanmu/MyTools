@@ -16,6 +16,7 @@ import markdown
 
 
 def star_unordered_list():
+    # TODO: add optional input to get unordered symbol
     text = pyperclip.paste()
     print(text)
     lines = text.split('\n')
