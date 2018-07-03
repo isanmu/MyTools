@@ -7,26 +7,23 @@
 # File Name: Tool_1.py
 
 import time
-
 import pyperclip
-import win32clipboard
-import markdown
-
-# markdown.markdown()
+# import win32clipboard
 
 
 def star_unordered_list():
     # TODO: add optional input to get unordered symbol
     text = pyperclip.paste()
-    print(text)
     lines = text.split('\n')
-    # print(lines)
-    for line in lines:
-        lines[lines.index(line)] = '\t😁 ' + line
-        # '\t◉ '; '\t• '; '\t😁 '...... (by 'shift+ctrl+B' under ch)
+    # for line in lines:
+    #     lines[lines.index(line)] = '\t😁 ' + line
+    # '\t◉ '; '\t• '; '\t😁 '...... (by 'shift+ctrl+B' under ch)
+
     # for i in range(len(lines)):
     #     lines[i] = '* ' + lines[i]
 
+    for i, line in enumerate(lines):
+        lines[i] = '\t😁 ' + line
     pyperclip.copy('\n'.join(lines))
     return lines
 
