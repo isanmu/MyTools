@@ -9,6 +9,7 @@
 # @Software: PyCharm
 
 import sys
+import traceback
 
 import pyperclip
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -44,7 +45,7 @@ class MyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             symbol = self.symbolBox.currentText()
             # print(repr(symbol))
             plus = 1 if self.plusBox.currentText() == '+' else 0
-            print('plus= ', plus)
+            print('plus = ', plus)
             direct = self.directBox.currentText()
             # assert str(direct) is 'all'
             if direct == 'left':
@@ -53,11 +54,12 @@ class MyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 direct = 2
             elif direct == 'right':
                 direct = 0
-            print('direct=', direct)
+            print('direct = ', direct)
             new_text = star_unordered_list(str(symbol), plus=plus, direct=direct)
             print('Done: add_nonorder_symbol !')
             print('Result:', new_text)
         except Exception as e:
+            traceback.print_exc()
             show_mainwindow_error(self, e)
 
     def add_copy(self):

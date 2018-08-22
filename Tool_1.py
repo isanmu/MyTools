@@ -19,8 +19,8 @@ def star_unordered_list(symbol='·', plus=1, direct=1):
     elif '\n' in text:
         lines = text.split('\n')
     else:
-        lines = text
-    # print(lines)
+        lines = [text]
+    print('lines', lines)
     # '\t◉ '; '\t• '; '\t😁 '...... (by 'shift+ctrl+B' under ch)
     if symbol == 'smile':
         symbol = '😁'
