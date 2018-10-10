@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>607</width>
+    <height>427</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="friend_label">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QTextBrowser" name="msg_textBrowser"/>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QTextEdit" name="msg_textEdit"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="send_Button">
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="recall_Button">
+     <property name="text">
+      <string>ReCall</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>send_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>send_func()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>229</x>
+     <y>426</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recall_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>recall_func()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>374</x>
+     <y>421</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>send_func()</slot>
+  <slot>recall_func()</slot>
+ </slots>
+</ui>
